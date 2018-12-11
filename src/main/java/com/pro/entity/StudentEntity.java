@@ -18,35 +18,49 @@ public class StudentEntity implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private int id;
+    private String id;
 
-    @Column(name = "stuName")
-    private String stuName;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "stuNUm")
-    private String stuNUm;
+    @Column(name = "number")
+    private String number;
 
-    public int getId() {
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getStuName() {
-        return stuName;
+    public String getName() {
+        return name;
     }
 
-    public void setStuName(String stuName) {
-        this.stuName = stuName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getStuNUm() {
-        return stuNUm;
+    public String getNumber() {
+        return number;
     }
 
-    public void setStuNUm(String stuNUm) {
-        this.stuNUm = stuNUm;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("StudentEntity{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", number='").append(number).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -26,4 +26,5 @@ public class TestSpringBoot {
         List<StudentEntity> all = studentJpa.findAll();
         return all;
     }
+
 }

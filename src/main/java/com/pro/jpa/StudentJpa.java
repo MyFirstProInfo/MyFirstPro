@@ -11,7 +11,8 @@ import java.io.Serializable;
  * Created by wangjinyu on 2018/11/16 17:54.
  */
 @Repository
-public interface StudentJpa extends JpaRepository<StudentEntity,Long>,
+public interface StudentJpa extends JpaRepository<StudentEntity,String>,
         JpaSpecificationExecutor<StudentEntity>,Serializable {
+
 
 }
